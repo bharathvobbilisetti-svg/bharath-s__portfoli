@@ -1,0 +1,356 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="fp2.css">
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-code"></i>
+        Portfolio
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fa-solid fa-laptop-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+    </ul>
+
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-text">
+
+        <h1>Hi, I'm VOBBILISETTI BHARATH</h1>
+
+        <p class="college">
+            Information Technology
+            <br>
+            ANITS
+        </p>
+
+        <p class="tagline">
+            Passionate Web Developer | Creative Designer |
+            Future Software Engineer
+        </p>
+
+        <a href="#contact" class="btn">
+            Hire Me
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="beach.jpg"
+        alt="Profile Picture">
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+    <h2>
+        <i class="fa-solid fa-user"></i>
+        About Me
+    </h2>
+
+    <div class="about-container">
+
+        <div class="about-text">
+
+            <p>
+                Hello! I'm
+                <strong>Bharath</strong>,
+                a passionate Computer Science student who enjoys
+                creating beautiful and responsive websites.
+            </p>
+
+            <p>
+                I love learning modern web technologies like
+                <u>HTML</u>,
+                <u></u>CSS</u>,
+                and
+                <u>JavaScript</u>.
+                I believe every project is an opportunity to improve my
+                creativity and problem-solving skills.
+            </p>
+
+            <p>
+                Apart from coding,
+                I enjoy
+                <em>reading technology blogs,
+                designing UI,
+                and participating in coding competitions.</em>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="skills">
+
+    <h2>
+        <i class="fa-solid fa-laptop-code"></i>
+        My Skills
+    </h2>
+
+    <div class="skills-container">
+
+        <!-- Technical Skills -->
+
+        <article class="skill-box">
+
+            <h3>Technical Skills</h3>
+
+            <div class="skill">
+
+                <span>HTML</span>
+
+                <div class="progress">
+                    <div class="html"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <span>CSS</span>
+
+                <div class="progress">
+                    <div class="css"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <span>Java</span>
+
+                <div class="progress">
+                    <div class="java"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <span>Python</span>
+
+                <div class="progress">
+                    <div class="python"></div>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- Soft Skills -->
+
+        <article class="skill-box">
+
+            <h3>Soft Skills</h3>
+
+            <ul>
+
+                <li>✔ Communication</li>
+
+                <li>✔ Team Work</li>
+
+                <li>✔ Leadership</li>
+
+                <li>✔ Problem Solving</li>
+
+                <li>✔ Time Management</li>
+
+                <li>✔ Creativity</li>
+
+            </ul>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="projects">
+
+    <h2>
+        <i class="fa-solid fa-diagram-project"></i>
+        My Projects
+    </h2>
+
+    <div class="project-container">
+
+        <!-- Project 1 -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-cart-shopping project-icon"></i>
+
+            <h3>E-Commerce Website</h3>
+
+            <p>
+                Designed a responsive online shopping website
+                using HTML and CSS with attractive UI and
+                product cards.
+            </p>
+
+            <a href="#" class="project-btn">
+                View Project
+            </a>
+
+        </div>
+
+        <!-- Project 2 -->
+
+        <div class="card">
+
+            <i class="fa-solid fa-graduation-cap project-icon"></i>
+
+            <h3>Student Management System</h3>
+
+            <p>
+                A simple student information portal with
+                clean interface, responsive layout,
+                and easy navigation.
+            </p>
+
+            <a href="#" class="project-btn">
+                View Project
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+    <h2>
+        <i class="fa-solid fa-envelope"></i>
+        Contact Me
+    </h2>
+
+    <form>
+
+        <label>Name</label>
+
+        <input
+        type="text"
+        placeholder="Enter your name"
+        required>
+
+        <label>Email</label>
+
+        <input
+        type="email"
+        placeholder="Enter your email"
+        required>
+
+        <label>Phone</label>
+
+        <input
+        type="tel"
+        placeholder="Enter phone number"
+        required>
+
+        <label>Message</label>
+
+        <textarea
+        rows="5"
+        placeholder="Write your message...">
+        </textarea>
+
+        <button type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 bharath vobbilisetti |
+        All Rights Reserved.
+    </p>
+
+    <address>
+
+        Email :
+        bharathvobbilisetti@gmail.com
+        <br>
+
+        Phone :
+        +91 6300279792
+
+    </address>
+
+    <div class="social-icons">
+
+        <a href="https://github.com"
+        target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/bharath-vobbilisetti-b0422532a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="https://www.instagram.com/bharath_vobbilisetti_?igsh=MXN6dzMxdWkwdngzdg=="
+        target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+       
+
+    </div>
+
+</footer>
+
+</body>
+</html>
+```
