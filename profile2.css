@@ -1,0 +1,170 @@
+    /* <style> */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            < !-- background: linear-gradient(-45deg, #ff512f, #dd2476, #00c9ff, #92fe9d);
+            -->background-size: 400% 400%;
+
+            < !-- animation: gradient 10s ease infinite;
+            -->color: white;
+
+        }
+
+
+        @keyframes gradient {
+
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+
+        }
+
+
+        .navbar {
+
+            background: rgba(0, 0, 0, .45);
+
+            backdrop-filter: blur(12px);
+
+        }
+
+
+        .navbar-brand {
+
+            font-size: 30px;
+
+            font-weight: bold;
+
+            color: white !important;
+
+        }
+
+
+        .nav-link {
+
+            font-size: 18px;
+
+            color: white !important;
+
+            margin-left: 15px;
+
+        }
+
+
+        .nav-link:hover {
+
+            color: yellow !important;
+
+        }
+
+
+        .section {
+
+            padding: 80px 0;
+
+        }
+
+
+        .profile-card {
+
+            background: rgba(255, 255, 255, .18);
+
+            backdrop-filter: blur(15px);
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+
+        }
+
+
+        .profile-img {
+
+            width: 270px;
+
+            height: 270px;
+
+            border-radius: 50%;
+
+            border: 8px solid white;
+
+            object-fit: cover;
+
+            box-shadow: 0 0 25px cyan;
+
+        }
+
+
+        .student-name {
+
+            font-size: 55px;
+
+            font-weight: 700;
+
+            background: linear-gradient(to right, #ffff00, #ff9800, #ff0066);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+        }
+
+
+        .info {
+
+            font-size: 22px;
+
+            line-height: 45px;
+
+        }
+
+
+        .info i {
+
+            font-size: 24px;
+
+            margin-right: 10px;
+
+            color: yellow;
+
+        }
+
+
+        .btn-profile {
+
+            background: linear-gradient(45deg, #ff512f, #dd2476);
+
+            border: none;
+
+            padding: 12px 35px;
+
+            font-size: 20px;
+
+            border-radius: 30px;
+
+            color: white;
+
+        }
+
+
+        .btn-profile:hover {
+
+            transform: scale(1.1);
+
+        }
+    /* </style> */
