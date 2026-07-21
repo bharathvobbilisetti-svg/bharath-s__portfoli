@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Portal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: linear-gradient(120deg, #7dd3fc, #c4b5fd);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .registration-box {
+            width: 700px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field label {
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #374151;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .gender-box {
+            display: flex;
+            gap: 20px;
+            margin-top: 8px;
+        }
+
+        .gender-box label {
+            font-weight: normal;
+        }
+
+        .full-width {
+            grid-column: 1/3;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .message {
+            margin-top: 4px;
+            color: #dc2626;
+            font-size: 13px;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #15803d;
+            font-size: 18px;
+        }
+
+        @media(max-width:700px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="registration-box">
+        <h1>Student Registration</h1>
+        <form id="studentForm">
+            <div class="form-grid">
+                <div class="field">
+                    <label>Full Name</label>
+                    <input type="text" id="fullname">
+                    <div class="message" id="msgName"></div>
+                </div>
+                <div class="field">
+                    <label>Roll Number</label>
+                    <input type="text" id="rollno">
+                    <div class="message" id="msgRoll"></div>
+                </div>
+                <div class="field">
+                    <label>Email ID</label>
+                    <input type="text" id="emailid">
+                    <div class="message" id="msgEmail"></div>
+                </div>
+                <div class="field">
+                    <label>Mobile Number</label>
+                    <input type="text" id="mobile">
+                    <div class="message" id="msgMobile"></div>
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input type="password" id="pass">
+                    <div class="message" id="msgPass"></div>
+                </div>
+                <div class="field">
+                    <label>Confirm Password</label>
+                    <input type="password" id="cpass">
+                    <div class="message" id="msgCPass"></div>
+                </div>
+                <div class="field">
+                    <label>Gender</label>
+                    <div class="gender-box">
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                        <label><input type="radio" name="gender" value="Other"> Other</label>
+                    </div>
+                    <div class="message" id="msgGender"></div>
+                </div>
+                <div class="field">
+                    <label>Department</label>
+                    <select id="dept">
+                        <option value="">Choose Department</option>
+                        <option>Computer Science</option>
+                        <option>Information Technology</option>
+                        <option>Electronics</option>
+                        <option>Mechanical</option>
+                        <option>Civil</option>
+                    </select>
+                    <div class="message" id="msgDept"></div>
+                </div>
+                <div class="field full-width">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dob">
+                    <div class="message" id="msgDob"></div>
+                </div>
+                <div class="full-width">
+                    <button type="submit">Register Student</button>
+                </div>
+            </div>
+            <div id="result"></div>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById("studentForm");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            document.querySelectorAll(".message").forEach(item => item.innerHTML = "");
+            document.getElementById("result").innerHTML = "";
+            let status = true;
+            const studentName = document.getElementById("fullname").value.trim();
+            const studentRoll = document.getElementById("rollno").value.trim();
+            const studentEmail = document.getElementById("emailid").value.trim();
+            const studentMobile = document.getElementById("mobile").value.trim();
+            const studentPassword = document.getElementById("pass").value;
+            const confirmPassword = document.getElementById("cpass").value;
+            const department = document.getElementById("dept").value;
+            const birth = document.getElementById("dob").value;
+            const gender = document.querySelector("input[name='gender']:checked");
+            if (studentName.length === 0) {
+                document.getElementById("msgName").textContent = "Please enter your name.";
+                status = false;
+            }
+            if (!/^[A-Za-z0-9]+$/.test(studentRoll)) {
+                document.getElementById("msgRoll").textContent = "Only letters and numbers are allowed.";
+                status = false;
+            }
+            if (!/^\S+@\S+\.\S+$/.test(studentEmail)) {
+                document.getElementById("msgEmail").textContent = "Invalid email address.";
+                status = false;
+            }
+            if (!/^\d{10}$/.test(studentMobile)) {
+                document.getElementById("msgMobile").textContent = "Enter exactly 10 digits.";
+                status = false;
+            }
+            if (studentPassword.length < 8) {
+                document.getElementById("msgPass").textContent = "Minimum 8 characters required.";
+                status = false;
+            }
+            if (confirmPassword !== studentPassword) {
+                document.getElementById("msgCPass").textContent = "Passwords do not match.";
+                status = false;
+            }
+            if (gender === null) {
+                document.getElementById("msgGender").textContent = "Select one option.";
+                status = false;
+            }
+            if (department === "") {
+                document.getElementById("msgDept").textContent = "Choose your department.";
+                status = false;
+            }
+            if (birth === "") {
+                document.getElementById("msgDob").textContent = "Date of Birth is required.";
+                status = false;
+            }
+            if (status) {
+                document.getElementById("result").innerHTML =
+                    "🎉 Registration Completed Successfully.";
+                form.reset();
+            }
+        });
+    </script>
+</body>
+
+</html>
